@@ -80,8 +80,8 @@ contract ProxyWalletFactory is Ownable {
     }
 
     function checkProxyWalletAddress(
-        address _proxy,
-        address _deployer
+        address _deployer,
+        address _proxy
     ) public view returns (bool) {
         return managers[_deployer] && isManagerDeployed[_deployer][_proxy];
     }
